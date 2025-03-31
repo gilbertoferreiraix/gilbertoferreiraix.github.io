@@ -13,6 +13,7 @@
             background-color: #F1F1F1;
             color: #545454;
             text-align: center;
+            padding-top: 70px;  /* 🔹 Ajusta o espaço para o cabeçalho fixo */
         }
         header {
             font-family: 'Syncopate', sans-serif;
@@ -20,6 +21,11 @@
             padding: 20px;
             background-color: #545454;
             color: #F1F1F1;
+            position: fixed;  /* 🔹 Fixa o cabeçalho no topo */
+            top: 0;           /* 🔹 Mantém no topo */
+            left: 0;
+            width: 100%;      /* 🔹 Garante que ocupa toda a largura */
+            z-index: 1000;    /* 🔹 Mantém acima dos outros elementos */
         }
         .gallery {
             display: flex;
@@ -29,12 +35,24 @@
             padding: 20px;
         }
         .gallery img {
-            width: 90%; /* A largura das imagens será 90% do tamanho da tela */
-            max-width: 1200px; /* Tamanho máximo para grandes telas */
-            height: auto; /* A altura será ajustada proporcionalmente */
+            width: 90%;               /* 🔹 Mantém as imagens responsivas */
+            max-width: 1200px;        /* 🔹 Define um limite máximo */
+            height: auto;             /* 🔹 Mantém a proporção correta */
+            object-fit: contain;      /* 🔹 Garante que a imagem não fique distorcida */
             border-radius: 8px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
+        @media (max-width: 768px) {
+    header {
+        font-size: 1.5em;  /* 🔹 Reduz o tamanho do cabeçalho em telas pequenas */
+        padding: 15px;
+    }
+
+    .gallery img {
+        width: 95%;   /* 🔹 Usa mais espaço da tela no celular */
+        max-width: 100%;
+    }
+}
     </style>
 </head>
 <body>
