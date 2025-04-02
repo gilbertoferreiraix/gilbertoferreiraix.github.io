@@ -26,15 +26,21 @@
             font-size: 30px;
             padding: 14px 0;
             z-index: 1000;
-            letter-spacing: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            letter-spacing: 12px;
+        }
+        
+        .header-content {
+            position: relative;
+            width: 100%;
+            text-align: center;
         }
         
         .menu-btn {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
             cursor: pointer;
-            padding: 0 30px;
             font-size: 24px;
         }
         
@@ -79,36 +85,42 @@
             margin: 20px 0;
         }
         
-        @media (max-width: 768px) {
-            .header {
-                font-size: 20px;
-            }
-            .menu-btn {
-                padding: 0 15px;
-                font-size: 20px;
-            }
-            img {
-                margin: 12px 0;
-            }
+     @media (max-width: 768px) {
+        .header {
+        font-size: 20px;
+        padding: 10px 0; /* Reduzi um pouco o padding */
+        white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+        overflow: hidden; /* Esconde qualquer texto que ultrapasse */
+        text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
         }
+    
+        .header-content {
+        padding: 0 40px; /* Garante espaço para o ícone do menu */
+        }
+    
+        .menu-btn {
+        right: 15px;
+        font-size: 20px;
+        }
+    }
     </style>
 </head>
 <body>
     <div class="header">
-        Gilberto Ferreira
-        <div class="menu-container">
+        <div class="header-content">
+            Gilberto Ferreira
             <div class="menu-btn" onclick="toggleMenu()">☰</div>
-            <div class="menu-content" id="menuContent">
-                <a href="#biography">Biography</a>
-                <a href="#works">Works</a>
-                <a href="#contact">Contact</a>
-            </div>
+        </div>
+        <div class="menu-content" id="menuContent">
+            <a href="#biography">Biography</a>
+            <a href="#works">Works</a>
+            <a href="#contact">Contact</a>
         </div>
     </div>
     <div class="container">
         <img src="https://gilbertoferreiraix.github.io/0_Capa.png" alt="0_Portfolio_Capa.png" id="biography">
-        <img src="https://gilbertoferreiraix.github.io/1_Genealogia_2025.png" alt="1_Portfolio_Genealogia_2025.png">
-        <img src="https://gilbertoferreiraix.github.io/2_SnakeAwake_2024.png" alt="2_Portfolio_SnakeAwake_2024.png" id="works">
+        <img src="https://gilbertoferreiraix.github.io/1_Genealogia_2025.png" alt="1_Portfolio_Genealogia_2025.png"id="works">
+        <img src="https://gilbertoferreiraix.github.io/2_SnakeAwake_2024.png" alt="2_Portfolio_SnakeAwake_2024.png">
         <img src="https://gilbertoferreiraix.github.io/3_Atelier_2022.png" alt="3_Atelier_2022.png">
         <img src="https://gilbertoferreiraix.github.io/4_SetePecados_2022.png" alt="4_SetePecados_2022.png">
         <img src="https://gilbertoferreiraix.github.io/5_PinkUmbrellas_2021.png" alt="5_PinkUmbrellas_2021.png">
@@ -132,7 +144,7 @@
             document.getElementById("menuContent").classList.toggle("show");
         }
         
-        // Fechar o menu se clicar fora dele
+        // Close the menu if clicked outside
         window.onclick = function(event) {
             if (!event.target.matches('.menu-btn')) {
                 var dropdowns = document.getElementsByClassName("menu-content");
