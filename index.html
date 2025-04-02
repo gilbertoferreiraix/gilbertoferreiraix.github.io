@@ -18,17 +18,18 @@
             width: 100%;
             background-color: #545454;
             color: white;
-            padding: 15px 0;
-            font-size: 24px;
+            padding: 20px 0;
+            font-size: 28px;
+            font-weight: bold;
             z-index: 1000;
         }
         .container {
-            padding-top: 80px; /* Espaço para evitar sobreposição do título */
+            padding-top: 100px; /* Espaço para evitar sobreposição do título */
         }
         .image-container {
             width: 90%; /* Ajusta para ocupar 90% da tela no desktop */
             max-width: 1200px;
-            margin: 20px auto; /* Espaçamento entre imagens */
+            margin: 30px auto; /* Espaçamento consistente entre imagens */
         }
         img {
             width: 100%;
@@ -38,7 +39,11 @@
         @media (max-width: 768px) {
             .image-container {
                 width: 100%; /* Mantém 100% da largura da tela no celular */
-                margin: 10px 0; /* Mantém o espaçamento entre imagens */
+                margin: 15px 0; /* Mantém o espaçamento entre imagens no celular */
+            }
+            .header {
+                font-size: 24px; /* Ajuste do tamanho do título no celular */
+                padding: 15px 0;
             }
         }
     </style>
