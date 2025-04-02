@@ -4,46 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gilberto Ferreira</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Saira+Condensed:wght@300;700&display=swap" rel="stylesheet">
     <style>
         body {
+            background-color: #545454;
+            color: #F1F1F1;
+            font-family: 'Saira Condensed', sans-serif;
             margin: 0;
-            font-family: 'Syncopate', sans-serif;
-            background-color: #F1F1F1;
+            padding: 0;
             text-align: center;
         }
-        .header {
+        .top-bar {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
             background-color: #545454;
-            color: white;
-            padding: 20px 0;
-            font-size: 28px;
-            font-weight: bold;
+            color: #F1F1F1;
+            padding: 15px 0;
+            font-size: 24px;
+            font-family: 'Syncopate', sans-serif;
             z-index: 1000;
+            text-align: center;
         }
         .container {
-            padding-top: 100px; /* Espaço para evitar sobreposição do título */
+            margin-top: 80px;
+            width: 90%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .image-container {
-            width: 90%; /* Ajusta para ocupar 90% da tela no desktop */
-            max-width: 1200px;
-            margin: 30px auto; /* Espaçamento consistente entre imagens */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 30px;
         }
-        img {
+        .image-container img {
             width: 100%;
+            max-width: 900px;
             height: auto;
             display: block;
         }
         @media (max-width: 768px) {
-            .image-container {
-                width: 100%; /* Mantém 100% da largura da tela no celular */
-                margin: 15px 0; /* Mantém o espaçamento entre imagens no celular */
+            .top-bar {
+                font-size: 20px;
+                padding: 10px 0;
             }
-            .header {
-                font-size: 24px; /* Ajuste do tamanho do título no celular */
-                padding: 15px 0;
+            .container {
+                width: 100%;
+                margin-top: 70px;
+            }
+            .image-container img {
+                width: 100%;
+                max-width: none;
             }
         }
     </style>
