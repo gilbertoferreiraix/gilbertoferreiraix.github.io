@@ -8,7 +8,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Saira+Condensed:wght@300;400;700&display=swap');
         
         body {
-            background-color: #F1F1F1;
+            background-color: #D9D9D9; /* Changed as requested */
             color: #545454;
             font-family: 'Saira Condensed', sans-serif;
             margin: 0;
@@ -22,10 +22,9 @@
             background-color: #545454;
             color: #F1F1F1;
             font-family: 'Syncopate', sans-serif;
-            font-size: 30px;
             padding: 14px 0;
             z-index: 1000;
-            letter-spacing: 10px;
+            letter-spacing: 12px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -36,7 +35,7 @@
             text-align: center;
             white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis;
+            font-size: clamp(16px, 4vw, 30px); /* Responsive scaling */
             padding: 0 20px;
         }
         
@@ -90,11 +89,10 @@
         
         @media (max-width: 768px) {
             .header {
-                font-size: 5vw;
-                letter-spacing: 5px;
                 padding: 10px 0;
             }
             .header-content {
+                font-size: clamp(14px, 5vw, 24px); /* More aggressive scaling on mobile */
                 padding: 0 40px 0 10px;
             }
             .menu-btn {
