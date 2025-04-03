@@ -13,7 +13,6 @@
             font-family: 'Saira Condensed', sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center;
         }
         
         .header {
@@ -26,22 +25,26 @@
             font-size: 30px;
             padding: 14px 0;
             z-index: 1000;
-            letter-spacing: 12px;
+            letter-spacing: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         .header-content {
-            position: relative;
-            width: 100%;
+            flex-grow: 1;
             text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 0 20px;
         }
         
         .menu-btn {
-            position: absolute;
-            right: 30px;
-            top: 50%;
-            transform: translateY(-50%);
             cursor: pointer;
+            padding: 0 30px;
             font-size: 24px;
+            flex-shrink: 0;
         }
         
         .menu-content {
@@ -51,7 +54,7 @@
             top: 100%;
             background-color: #545454;
             min-width: 160px;
-            z-index: 1;
+            z-index: 1001;
         }
         
         .menu-content a {
@@ -85,36 +88,29 @@
             margin: 20px 0;
         }
         
-    @media (max-width: 768px) {
-    .header {
-        font-size: 18px; /* Reduz um pouco o tamanho */
-        padding: 10px 40px 10px 10px; /* Espaço para o menu */
-        white-space: nowrap; /* Impede quebra de linha */
-        overflow: hidden; /* Esconde o que ultrapassar */
-        text-overflow: ellipsis; /* Adiciona "..." se cortar */
-    }
-    .menu-btn {
-        right: 15px;
-        font-size: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        position: absolute;
-    }
-}
+        @media (max-width: 768px) {
+            .header {
+                font-size: 5vw;
+                letter-spacing: 5px;
+                padding: 10px 0;
+            }
+            .header-content {
+                padding: 0 40px 0 10px;
+            }
+            .menu-btn {
+                padding: 0 15px;
+                font-size: 6vw;
+            }
+            img {
+                margin: 12px 0;
+            }
+        }
     </style>
 </head>
 <body>
-<div class="header">
-    <div class="header-content">
-        <span class="title">Gilberto Ferreira</span>
+    <div class="header">
+        <div class="header-content">Gilberto Ferreira</div>
         <div class="menu-btn" onclick="toggleMenu()">☰</div>
-    </div>
-    <div class="menu-content" id="menuContent">
-        <a href="#biography">Biography</a>
-        <a href="#works">Works</a>
-        <a href="#contact">Contact</a>
-    </div>
-</div>
         <div class="menu-content" id="menuContent">
             <a href="#biography">Biography</a>
             <a href="#works">Works</a>
@@ -123,8 +119,8 @@
     </div>
     <div class="container">
         <img src="https://gilbertoferreiraix.github.io/0_Capa.png" alt="0_Portfolio_Capa.png" id="biography">
-        <img src="https://gilbertoferreiraix.github.io/1_Genealogia_2025.png" alt="1_Portfolio_Genealogia_2025.png"id="works">
-        <img src="https://gilbertoferreiraix.github.io/2_SnakeAwake_2024.png" alt="2_Portfolio_SnakeAwake_2024.png">
+        <img src="https://gilbertoferreiraix.github.io/1_Genealogia_2025.png" alt="1_Portfolio_Genealogia_2025.png">
+        <img src="https://gilbertoferreiraix.github.io/2_SnakeAwake_2024.png" alt="2_Portfolio_SnakeAwake_2024.png" id="works">
         <img src="https://gilbertoferreiraix.github.io/3_Atelier_2022.png" alt="3_Atelier_2022.png">
         <img src="https://gilbertoferreiraix.github.io/4_SetePecados_2022.png" alt="4_SetePecados_2022.png">
         <img src="https://gilbertoferreiraix.github.io/5_PinkUmbrellas_2021.png" alt="5_PinkUmbrellas_2021.png">
@@ -148,18 +144,14 @@
             document.getElementById("menuContent").classList.toggle("show");
         }
         
-        // Close the menu if clicked outside
-        window.onclick = function(event) {
-            if (!event.target.matches('.menu-btn')) {
-                var dropdowns = document.getElementsByClassName("menu-content");
-                for (var i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById("menuContent");
+            const btn = document.querySelector(".menu-btn");
+            if (!event.target.matches('.menu-btn') && !event.target.closest('.menu-content')) {
+                menu.classList.remove("show");
             }
-        }
+        });
     </script>
 </body>
 </html>
