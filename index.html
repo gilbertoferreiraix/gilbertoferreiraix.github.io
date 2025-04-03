@@ -85,32 +85,36 @@
             margin: 20px 0;
         }
         
-     @media (max-width: 768px) {
-        .header {
-        font-size: 20px;
-        padding: 10px 0; /* Reduzi um pouco o padding */
-        white-space: nowrap; /* Impede que o texto quebre em várias linhas */
-        overflow: hidden; /* Esconde qualquer texto que ultrapasse */
-        text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
-        }
-    
-        .header-content {
-        padding: 0 40px; /* Garante espaço para o ícone do menu */
-        }
-    
-        .menu-btn {
+    @media (max-width: 768px) {
+    .header {
+        font-size: 18px; /* Reduz um pouco o tamanho */
+        padding: 10px 40px 10px 10px; /* Espaço para o menu */
+        white-space: nowrap; /* Impede quebra de linha */
+        overflow: hidden; /* Esconde o que ultrapassar */
+        text-overflow: ellipsis; /* Adiciona "..." se cortar */
+    }
+    .menu-btn {
         right: 15px;
         font-size: 20px;
-        }
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
     }
+}
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            Gilberto Ferreira
-            <div class="menu-btn" onclick="toggleMenu()">☰</div>
-        </div>
+<div class="header">
+    <div class="header-content">
+        <span class="title">Gilberto Ferreira</span>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    </div>
+    <div class="menu-content" id="menuContent">
+        <a href="#biography">Biography</a>
+        <a href="#works">Works</a>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
         <div class="menu-content" id="menuContent">
             <a href="#biography">Biography</a>
             <a href="#works">Works</a>
