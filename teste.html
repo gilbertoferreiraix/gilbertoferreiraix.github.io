@@ -144,6 +144,11 @@
       .overlay-text p {
         font-size: 3vw;
       }
+
+      #first-image-text {
+        padding-left: 3vw;
+        padding-right: 3vw;
+      }
     }
   </style>
 </head>
@@ -162,7 +167,7 @@
 
     
   <!-- Primeira imagem com texto -->
-  <section class="text-overlay-section">
+  <div class="overlay-text" id="first-image-text">
     <img class="background-image" src="https://gilbertoferreiraix.github.io/0_Capa_1.png" alt="0_Capa_1" class="background-image" id="biography" />
     <div class="overlay-text">
      <p>Gilberto Ferreira is a <span class="highlight">multidisciplinary curator</span> and <span class="highlight">project manager</span> with a background in multiple arts and cultural management. Based between  <span class="highlight">Berlin and Hamburg</span>, he has extensive experience leading  <span class="highlight">artistic planning</span> and producing award-winning  <span class="highlight">cultural projects</span>. His work focuses on fostering international partnerships and promoting cultural exchange, with an emphasis on the intersection of music, contemporary performance and digital media. Currently, he develops transnational artistic  projects and collaborations.</p>
@@ -297,9 +302,9 @@
 
 .overlay-text {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 55%;
-  transform: translateY(-50%);
+  transform: translateY(-30%);
   width: 40%;
   color: #F1F1F1;
   font-family: 'Saira Condensed', sans-serif;
