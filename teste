@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gilberto Ferreira</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Saira+Condensed:wght@300;400;700&display=swap');
+        
+        body {
+            background-color: #D9D9D9;
+            color: #545454;
+            font-family: 'Saira Condensed', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #545454;
+            color: #F1F1F1;
+            font-family: 'Syncopate', sans-serif;
+            padding: 14px 0;
+            z-index: 1000;
+            letter-spacing: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header-content {
+            flex-grow: 1;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            /* More aggressive responsive scaling */
+            font-size: clamp(12px, 3.5vw, 32px);
+            padding: 0 50px; /* Space for menu button */
+        }
+        
+        .menu-btn {
+            cursor: pointer;
+            padding: 0 20px;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        .menu-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background-color: #545454;
+            min-width: 160px;
+            z-index: 1001;
+        }
+        
+        .menu-content a {
+            color: #F1F1F1;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 16px;
+            letter-spacing: normal;
+        }
+        
+        .menu-content a:hover {
+            background-color: #6d6d6d;
+        }
+        
+        .show {
+            display: block;
+        }
+        
+        .container {
+            max-width: 90%;
+            margin: auto;
+            padding-top: 50px;
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 8px 0;
+                letter-spacing: 5px;
+            }
+            .header-content {
+                font-size: clamp(14px, 4vw, 20px);
+                text-align: center;
+                padding: 0 40px 0 10px;
+            }
+            .menu-btn {
+                padding: 0 15px;
+                font-size: 18px;
+            }
+            .container {
+                max-width: 100%;
+                padding-top: 45px;
+            }
+            img {
+                margin: 10px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-content {
+                font-size: clamp(12px, 4.5vw, 18px);
+                letter-spacing: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">Gilberto Ferreira</div>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <div class="menu-content" id="menuContent">
+            <a href="#biography">Biography</a>
+            <a href="#works">Works</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+   
+<div class="text-overlay-section">
+  <img src="https://gilbertoferreiraix.github.io/0_Capa_1.png" alt="0_Capa_1" class="background-image" id="biography" />
+  <div class="overlay-text">
+    <h1>Nome do Projeto</h1>
+    <p>Gilberto Ferreira is a multidisciplinary curator and project manager with a background in multiple arts and cultural management. Based between Berlin and Hamburg, he has extensive experience leading artistic planning and producing award-winning cultural projects. His work focuses on fostering international partnerships and promoting cultural exchange, with an emphasis on the intersection of music, contemporary performance and digital media. Currently, he develops transnational artistic  projects and collaborations.</p>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container">
+        <img src="https://gilbertoferreiraix.github.io/0_Portfolio_Capa_1.png" alt="0_Portfolio_Capa_1" id="biography">
+        <img src="https://gilbertoferreiraix.github.io/1_Portfolio_Genealogia_2025.png" alt="1_Portfolio_Genealogia_2025.png" id="works">
+        <img src="https://gilbertoferreiraix.github.io/26_Contato.png" alt="26_Contato.png" id="contact">
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("menuContent").classList.toggle("show");
+        }
+        
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById("menuContent");
+            const btn = document.querySelector(".menu-btn");
+            if (!event.target.matches('.menu-btn') && !event.target.closest('.menu-content')) {
+                menu.classList.remove("show");
+            }
+        });
+    </script>
+</body>
+</html>
