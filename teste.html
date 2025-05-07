@@ -100,14 +100,16 @@
 
     .overlay-text {
       position: absolute;
-      top: 50%;
-      left: 60%;
-      transform: translateY(-50%);
-      width: 35%;
-      color: #F1F1F1;
-      letter-spacing: 0.12em;
-      font-weight: 100;
-    }
+    top: 50%;
+    left: 60%;
+    transform: translateY(-50%);
+    width: 35%;
+    color: #F1F1F1;
+    letter-spacing: 0.12em;
+    font-weight: 100;
+    padding-right: 4vw; /* ✅ AQUI: margem interna à direita */
+    box-sizing: border-box; /* ✅ Garante que padding respeita o width */
+}
 
     .overlay-text h1 {
       font-size: 2.2vw;
