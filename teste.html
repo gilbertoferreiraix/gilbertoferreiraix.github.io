@@ -102,22 +102,26 @@
 
 .overlay-text {
   position: absolute;
-  top: 35%; /* ajuste conforme necessário */
-  left: 5%; /* ajuste conforme necessário */
-  color: white;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-  text-transform: uppercase;
+  top: 50%;
+  left: 55%; /* começa na metade direita */
+  transform: translateY(-50%); /* centraliza verticalmente */
+  width: 40%; /* ocupa parte da direita */
+  color: #F1F1F1;
+  font-family: 'Saira Condensed', sans-serif;
+  letter-spacing: 0.12em;
+  text-align: left;
 }
 
 .overlay-text h1 {
-  font-size: 3rem;
+  font-size: 2.5vw; /* adaptável à tela, mas proporcional à imagem */
   margin: 0;
+  font-weight: 700;
 }
 
 .overlay-text p {
-  font-size: 1.5rem;
-  margin: 10px 0 0;
+  font-size: 1.2vw;
+  font-weight: 400;
+  margin-top: 1vw;
 }
 
 
