@@ -93,6 +93,16 @@
       padding: 0 5vw;
     }
 
+    .right-aligned-text .overlay-text {
+  left: auto;
+  right: 5vw;
+  text-align: right;
+}
+    .centered-text .overlay-text {
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+}
     .background-image {
       width: 100%;
       height: auto;
@@ -121,7 +131,7 @@
     }
 
     .overlay-text p {
-      font-size: 1.5vw;
+      font-size: clamp(10px, 1.3vw, 18px);
       margin-top: 1vw;
       font-weight: 30;
     }
@@ -157,6 +167,13 @@
         transform: translateX(-50%) translateY(-50%);
         text-align: center;
       }
+       .right-aligned-text .overlay-text {
+    width: 80%;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+  }
       .overlay-text p {
         font-size: 3vw;
       }
@@ -168,30 +185,49 @@
     <div class="header-content">Gilberto Ferreira</div>
     <div class="menu-btn" onclick="toggleMenu()">☰</div>
     <div class="menu-content" id="menu">
-      <a href="#">Bio</a>
-      <a href="#">Works</a>
-      <a href="#">Contact</a>
+      <a href="#">bio</a>
+      <a href="#">works</a>
+      <a href="#">contact</a>
     </div>
   </div>
 
-  <!-- Primeira imagem com texto -->
-  <section class="text-overlay-section">
+  <!-- BIO -->
+
+
+  <section class="text-overlay-section" id="bio">
     <img class="background-image" src="https://gilbertoferreiraix.github.io/0_Capa_1.png" alt="0_Capa_1" />
     <div class="overlay-text">
       <p>Gilberto Ferreira is a <span class="highlight">multidisciplinary curator</span> and <span class="highlight">project manager</span> with a background in multiple arts and cultural management. Based between  <span class="highlight">Berlin and Hamburg</span>, he has extensive experience leading  <span class="highlight">artistic planning</span> and producing award-winning  <span class="highlight">cultural projects</span>. His work focuses on fostering international partnerships and promoting <span class="highlight">cultural exchange</span>, with an emphasis on the intersection of music, <span class="highlight">contemporary</span> performance and digital media. Currently, he develops <span class="highlight">transnational</span> artistic  projects and collaborations.</p>
     </div>
   </section>
 
-  <!-- Segunda imagem com linhas de tamanhos variados -->
-  <section class="text-overlay-section">
-    <img class="background-image" src="sua-imagem2.jpg" alt="Outra imagem" />
-    <div class="overlay-text">
+  
+  <!-- WORKS  -->
+  
+  <section class="text-overlay-section right-aligned-text" id="works>
+  <img class="background-image" src="https://gilbertoferreiraix.github.io/1_Genealogia_2025.png" alt="1_Genealogia_2025.png" />
+  <div class="overlay-text">
+
       <p class="line small">Linha pequena</p>
       <p class="line medium">Linha média</p>
       <p class="line large highlight">Linha grande e destacada</p>
     </div>
   </section>
 
+  
+<!-- CONTACT  -->
+<section class="text-overlay-section centered-text" id="contact">
+  <img class="background-image" src="ultima-imagem.jpg" alt="Última imagem" />
+  <div class="overlay-text">
+    <h1>Contact</h1>
+    <p>email 
+telefone</p>
+  </div>
+</section>
+
+
+
+  
   <script>
     function toggleMenu() {
       const menu = document.getElementById('menu');
