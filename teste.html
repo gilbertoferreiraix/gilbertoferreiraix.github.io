@@ -105,10 +105,13 @@
       margin-top: 100px;
       margin-bottom: 80px;
       padding: 0 5vw;
+      width: 35%;
+      padding-right: 4vw; /* ✅ AQUI: margem interna à direita */
+      box-sizing: border-box; /* ✅ Garante que padding respeita o width */
     }
 
     .left-aligned-text .overlay-text {
-  top: 32%;
+  top: 31%;
   left: 12vw;
   right: auto;
   text-align: left;
@@ -129,14 +132,12 @@
     top: 50%;
     left: 56%;
     transform: translateY(-50%);
-    width: 35%;
     color: #F1F1F1;
     letter-spacing: 0.13em;
     text-align: justify;
     font-weight: 30;
     
-    padding-right: 4vw; /* ✅ AQUI: margem interna à direita */
-    box-sizing: border-box; /* ✅ Garante que padding respeita o width */
+  
 }
 
     .overlay-text h1 {
