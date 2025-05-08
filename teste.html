@@ -177,22 +177,19 @@
         margin-top: 80px;
         margin-bottom: 60px;
       }
-      .overlay-text {
-       position: absolute;
-       top: 50%;
-       left: 56%; 
-    transform: translateY(-50%);
-        width: 80%;
-        font-size: clamp(0.1px, 1.0vw, 12px);
-        transform: translateX(-50%) translateY(-50%);
-        text-align: justify;
-      }
-       .left-aligned-text .overlay-text {
-    width: 80%;
-    left: auto;
-    right: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    text-align: center;
+     .overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: justify;
+}
+   .left-aligned-text .overlay-text {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
   }
       .overlay-text p {
         font-size: 3vw;
