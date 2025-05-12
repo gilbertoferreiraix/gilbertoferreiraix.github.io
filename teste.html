@@ -1,3 +1,12 @@
+para a opção 1, como eu faço considerando todas as outras configurações já estabelecidas para cada linha, por exemplo em:
+
+    <p class="line medium categoria">Theatre performance</p>
+    <p class="line small local">Hamburg - 2025-2026</p>
+
+
+
+aqui o código completo para análise:
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,8 +30,8 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 0 1rem; /* Isso cria o espaçamento lateral */
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   overflow: hidden;
 }
   
@@ -165,22 +174,14 @@
 
    .line.medium { font-size: 1.45vw;}
     
-    .line.large.função { font-size: 1.8vw; font-weight: 20; line-height: 1.1; font-weight: thin }
-    .line.medium.categoria { font-size: 1.8vw; letter-spacing: 0em ; font-weight: light}
-    .line.small.local  { font-size: 1.7vw; letter-spacing: 0em; font-weight: thin}
-    .line.mini.descrição { font-size: 1.2vw;  line-height: 1.1; letter-spacing: 0em ; font-weight: thin}
-    .line.mini.nome { font-size: 1.2vw;  letter-spacing: 0em ; font-weight: light}
-    .line.mini.descrição.junto { font-size: 1.2vw;  letter-spacing: 0em ; font-weight: thin }
+    .line.large.função { font-size: 1.8vw; font-weight: 20; line-height: 1.1; font-weight: 100 }
+    .line.medium.categoria { font-size: 1.8vw; padding-top: 8px; letter-spacing: 0em ; font-weight: 100}
+    .line.small.local  { font-size: 1.7vw; padding-top: 0px ;letter-spacing: 0em; font-weight: 100}
+    .line.mini.descrição { font-size: 1.2vw; padding-top: 10px; line-height: 1.1; letter-spacing: 0em ; font-weight: 100}
+    .line.mini.nome { font-size: 1.2vw; padding-top: 5px; letter-spacing: 0em ; font-weight: 200}
+    .line.mini.descrição.junto { font-size: 1.2vw; padding-top: 0px; letter-spacing: 0em ; font-weight: 100 }
 
-    .tight {
-  margin-top: 0;
-  margin-bottom: 0;
-}
 
-    .tight-bottom {
-  margin-bottom: 4px;
-}
-    
 p + p {
   margin-top: 0.1em; /* ou 0 se quiser colado */
 }
@@ -258,10 +259,10 @@ p + p {
     <div class="overlay-text">
       <h1 class="section-title">GENEALOGÍA IN SITU</h1>
       <p class="line large função highlight">CO-DEVELOPMENT OF CONCEPT AND PRODUCTION MANAGEMENT</p>
-      <p class="line medium categoria tight">Theatre performance</p>
+      <p class="line medium categoria">Theatre performance</p>
       <p class="line small local">Hamburg - 2025-2026</p>
       <p class="line mini descrição">Interdisciplinary project of live performance, musiktheater and digital media, exploring memories between Chile and Germany, through decolonial narratives, cosmologies and imagined shared futures</p>
-      <p class="line mini descrição nome tight">Morín González Mena </p>
+      <p class="line mini descrição nome">Morín González Mena </p>
       <p class="line mini descrição junto">concept and dramaturgy</p>
       <p class="line mini descrição">Newly approved to be produced and funded by the BKM Hamburg</p>
     </div>
@@ -272,7 +273,7 @@ p + p {
   <img class="background-image" src="https://gilbertoferreiraix.github.io/26_Contato_clean.png" alt="26_Contato_clean.png" />
   <div class="overlay-text">
     <h1 class="section-title">Contact</h1>
-      <p class="line large highlight tight-bottom"><a href="malito:gilbertoferreiraix@gmail.com" target="_blank">gilbertoferreiraix@gmail.com</p></a>
+      <p class="line large highlight"><a href="malito:gilbertoferreiraix@gmail.com" target="_blank">gilbertoferreiraix@gmail.com</p></a>
     <p class="line large highlight" style="margin-top: 2px";>+49 176 35622242</p>
   </div>
 </section>
