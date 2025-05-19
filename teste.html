@@ -211,9 +211,6 @@
     .space-top {
   margin-top: 12px;
 }    
-
-
-    
     
 p + p {
   margin-top: 0.1em; /* ou 0 se quiser colado */
@@ -229,48 +226,43 @@ p + p {
       text-decoration: none;
     }
 
-    @media (max-width: 768px) {
-      .header {
-        padding: 8px 0;
-        letter-spacing: 5px;
-      }
-      .header-content {
-        font-size: clamp(14px, 4vw, 20px);
-        padding: 0 40px 0 10px;
-      }
-      .menu-btn {
-        padding: 0 15px;
-        font-size: 18px;
-      }
-   
-      .overlay-text {
-        position: static;
-        transform: none;
-        width: 100%;
-        text-align: left;
-        padding: 0 1rem; /* margem interna */
-        box-sizing: border-box;
-      }
 
-      .left-aligned-text .overlay-text {
-        padding: 0 1rem;
-        text-align: left;
-      }
-      .text-overlay-section {
-         padding: 0; /* remove padding lateral */
-      }
-      .background-image {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin: 0;
-        padding: 0;
-      }
 
-      .overlay-text p {
-        font-size: 3.5vw;
-      }
+   @media (max-width: 768px) {
+  .header {
+    padding: 8px 0;
+    letter-spacing: 5px;
   }
+
+  .header-content {
+    font-size: clamp(14px, 4vw, 20px);
+    padding: 0 40px 0 10px;
+  }
+
+  .menu-btn {
+    padding: 0 15px;
+    font-size: 18px;
+  }
+
+  .overlay-text {
+    font-size: 3.5vw; /* Mantém a responsividade do texto */
+    width: 80vw;       /* Reduz largura do bloco de texto */
+    left: 10vw;        /* Centraliza melhor em telas pequenas */
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .overlay-text p {
+    font-size: 3.5vw;
+  }
+
+  .text-overlay-section {
+    padding: 0;
+  }
+}
 
   </style>
 </head>
