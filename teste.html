@@ -242,36 +242,38 @@ p + p {
         padding: 0 15px;
         font-size: 18px;
       }
-      .text-overlay-section {
-        margin-top: 40px;
-        margin-bottom: 60px;
-        transform: translateY(-50%);
+   
+      .overlay-text {
+        position: static;
+        transform: none;
+        width: 100%;
+        text-align: left;
+        padding: 0 1rem; /* margem interna */
+        box-sizing: border-box;
       }
-     .overlay-text {
-  position: static;
-  transform: none;
-  top: 50%;
-  left: 50%; 
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: left;
-  padding: 1rem 0;
-}
-      
-   .left-aligned-text .overlay-text {
-  padding: 0;
-  text-align: left;
-}
-   .background-image {
-    width: 100%;
-    height: auto;
-    display: block;
+
+      .left-aligned-text .overlay-text {
+        padding: 0 1rem;
+        text-align: left;
+      }
+
+      .background-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+
       .overlay-text p {
-        font-size: 3vw;
+        font-size: 3.5vw;
       }
-    }
+  }
+
   </style>
 </head>
+
+  
 <body>
   <div class="header">
     <div class="header-content">Gilberto Ferreira</div>
