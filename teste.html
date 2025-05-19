@@ -108,13 +108,18 @@
 }
     .text-overlay-section {
       position: relative;
-      margin-top: 75px;
+      margin-top: px;
       margin-bottom: 20px;
       padding: 0 5vw;
       padding-right: 4vw; /* ✅ AQUI: margem interna à direita */
       box-sizing: border-box; /* ✅ Garante que padding respeita o width */
     }
 
+
+.text-overlay-section:first-of-type {
+  margin-top: 75px;
+}
+    
     .left-aligned-text .overlay-text {
     top: 38%;
     left: 12vw;
