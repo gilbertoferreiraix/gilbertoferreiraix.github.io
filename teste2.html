@@ -1,1 +1,185 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gilberto Ferreira</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Saira+Condensed:wght@100;200;300;400;500;700&display=swap');
+   
+   @font-face {
+  font-family: 'Tussilago W05 Book';
+  src: url('https://gilbertoferreiraix.github.io/TussilagoW05-Book.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+ /* Layout geral */
+body {
+  background-color: #D9D9D9;
+  color: #545454;
+  font-family: 'Saira Condensed', 'Tussilago W05 Book', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container com centralização e espaçamento lateral */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 70px 1rem 10px; /* Top padding aumentado para não cobrir conteúdo com header fixo */
+  overflow: hidden;
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 70px 0.5rem 10px;
+  }
+}
+
+/* Cabeçalho fixo no topo da página */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #545454;
+  color: #F1F1F1;
+  font-family: 'Syncopate', sans-serif;
+  padding: 14px 0;
+  z-index: 1000;
+  letter-spacing: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Título do cabeçalho centralizado e responsivo */
+.header-content {
+  flex-grow: 1;
+  text-align: center;
+  white-space: nowrap;
+  font-size: clamp(12px, 3.5vw, 32px);
+  padding: 0 70px;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    font-size: 20px;
+    padding: 0 30px;
+  }
+}
+
+/* Botão de menu (hambúrguer ou similar) */
+.menu-btn {
+  cursor: pointer;
+  padding: 0 20px;
+  font-size: 16px;
+  font-family: 'Saira Condensed', sans-serif;
+  color: #F1F1F1;
+  background: none;
+  border: none;
+}
+
+/* Menu dropdown oculto por padrão */
+.menu-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #545454;
+  min-width: 160px;
+  z-index: 1001;
+  font-family: 'Saira Condensed', sans-serif;
+}
+
+/* Links dentro do menu dropdown */
+.menu-content a {
+  color: #F1F1F1;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+}
+
+/* Hover e focus acessíveis */
+.menu-content a:hover,
+.menu-content a:focus {
+  background-color: #6d6d6d;
+  outline: none;
+}
+
+/* Classe para exibir o menu */
+.show {
+  display: block;
+}
+
+/* Estilo para títulos de seção */
+.section-title {
+  font-family: 'Tussilago W05 Book', 'Saira Condensed', sans-serif !important;
+  font-size: 3vw;
+  letter-spacing: 0.1em;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+</style>
+</head>
+
+
+<body>
+  <div class="header">
+    <div class="header-content">Gilberto Ferreira</div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <div class="menu-content" id="menu">
+      <a href="#bio">bio</a>
+      <a href="#works">works</a>
+      <a href="#contact">contact</a>
+    </div>
+  </div>
+
+<!-- BIO -->
+<section id="bio">
+  <img class="background-image" src="https://gilbertoferreiraix.github.io/0_Capa_1.png" alt="0_Capa_1" />
+  <div class="overlay-text">
+    <p class="line medium">Gilberto Ferreira is a <span class="highlight">multidisciplinary curator</span> and <span class="highlight">project manager</span> with a background in multiple arts and cultural management. Based between <span class="highlight">Berlin and Hamburg</span>, he has extensive experience leading <span class="highlight">artistic planning</span> and producing award-winning <span class="highlight">cultural projects</span>. His work focuses on fostering international partnerships and promoting <span class="highlight">cultural exchange</span>, with an emphasis on the intersection of music, <span class="highlight">contemporary</span> performance and digital media. Currently, he develops <span class="highlight">transnational</span> artistic projects and collaborations.</p>
+  </div>
+</section>
+
+<!-- WORKS -->
+<section id="works">
+  <img class="background-image" src="https://gilbertoferreiraix.github.io/1_Genealogia_2025.png" alt="1_Genealogia_2025.png" />
+  <div class="overlay-text">
+   <h1 class="section-title">GENEALOGÍA IN SITU</h1>
+    <p class="line large função highlight tight-bottom">CO-DEVELOPMENT OF CONCEPT AND PRODUCTION MANAGEMENT</p>
+      <p class="line medium categoria tight">Theatre performance</p>
+      <p class="line small local tight-bottom">Hamburg - 2025-2026</p>
+      <p class="line mini descrição tight-bottom">Interdisciplinary project of live performance, musiktheater and digital media, exploring memories between Chile and Germany, through decolonial narratives, cosmologies and imagined shared futures</p>
+      <p class="line mini descrição nome tight">Morín González Mena </p>
+      <p class="line mini descrição junto tight-bottom">concept and dramaturgy</p>
+      <p class="line mini descrição tight-bottom">Newly approved to be produced and funded by the BKM Hamburg</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <img class="background-image" src="https://gilbertoferreiraix.github.io/26_Contato_clean.png" alt="26_Contato_clean.png" />
+  <div class="overlay-text">
+      <h1 class="section-title">Contact</h1>
+      <p class="line medium"><a href="malito:gilbertoferreiraix@gmail.com" target="_blank">gilbertoferreiraix@gmail.com</p></a>
+       <p class="line medium" >+49 176 35622242</p>
+  </div>
+</section>
+
+ <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
+
+    
