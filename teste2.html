@@ -266,7 +266,40 @@ body {
   padding: 0;
 }
 
+p {
+  display: flex;
+}
 
+/* Link + Efeito Hover */
+.hover-image-link {
+  display: inline-block;
+  width: 2em; /* Tamanho base (relativo à fonte) */
+  max-width: 100%; /* Nunca ultrapassa o container */
+  position: relative;
+}
+
+/* Imagens (ajuste automático) */
+.hover-image-link img {
+  width: 100%; /* Ocupa 100% do link */
+  height: auto; /* Mantém proporção */
+  transition: opacity 0.3s; /* Suaviza a troca */
+}
+
+/* Esconde a imagem hover inicialmente */
+.hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+/* Mostra hover e esconde default ao passar o mouse */
+.hover-image-link:hover .default-img {
+  opacity: 0;
+}
+.hover-image-link:hover .hover-img {
+  opacity: 1;
+}
     
 </style>
 </head>
