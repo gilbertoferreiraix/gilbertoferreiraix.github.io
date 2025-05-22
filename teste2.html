@@ -37,7 +37,7 @@ body {
   .header {
     position: fixed;
     top: 0;
-    height: 80px;
+    height: clamp(25px, 12vh, 50px);
     width: 100%;
     background-color: #545454;
     color: #F1F1F1;
@@ -152,7 +152,7 @@ body {
 #bio {
   position: relative;
   padding-top: clamp(40px, 10vh, 100px); /* compensação progressiva para header fixa */
-  margin-top: 20;
+  margin-top: clamp(25px, 12vh, 50px);
 }
     
 #bio .overlay-text {
