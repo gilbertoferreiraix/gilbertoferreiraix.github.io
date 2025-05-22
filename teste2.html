@@ -81,11 +81,7 @@ body {
   border: none;
 }
 
-@media (max-width: 768px) {
-  .menu-btn {
-     font-size: 12px;
-  }
-}
+
     
 /* Menu dropdown oculto por padrão */
 .menu-content {
@@ -107,7 +103,13 @@ body {
   display: block;
   font-size: 16px;
 }
-
+    
+@media (max-width: 768px) {
+  .menu-content a {
+     font-size: 12px;
+  }
+}
+    
 /* Hover e focus acessíveis */
 .menu-content a:hover,
 .menu-content a:focus {
