@@ -54,7 +54,14 @@ body {
     justify-content: space-between;
     align-items: center;
   }
-  
+
+  @media (max-width: 764px) {
+  .header {
+     padding: 9px 0;
+  }
+}
+
+    
   /* Título do cabeçalho centralizado e responsivo */
   .header-content {
     flex-grow: 1;
@@ -81,7 +88,11 @@ body {
   border: none;
 }
 
-
+@media (max-width: 768px) {
+.menu-btn  {
+    padding: 0 10px;
+  }
+}
     
 /* Menu dropdown oculto por padrão */
 .menu-content {
@@ -94,7 +105,10 @@ body {
   z-index: 1001;
   font-family: 'Saira Condensed', sans-serif;
 }
-    
+@media (max-width: 768px) {
+  min-width: 130px;
+}
+     
 /* Links dentro do menu dropdown */
 .menu-content a {
   color: #F1F1F1;
@@ -144,6 +158,12 @@ body {
   position: relative;
   margin-top: 75px;
 }
+@media (max-width: 764px) {
+  #bio {
+   margin-top: 30px;
+  }
+}    
+    
 #bio .overlay-text {
   position: absolute;
   top: 50%;
