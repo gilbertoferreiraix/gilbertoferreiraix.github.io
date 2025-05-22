@@ -185,6 +185,25 @@ body {
   text-align: left;
 }
 
+/* WORKS - texto fixo à esquerda */
+#worksB {
+  position: relative;
+  margin-top: 10px;
+}
+@media (max-width: 764px) {
+  #worksB {
+   margin-top: 5px;
+  }
+} 
+#worksB .overlay-text {
+  position: absolute;
+  top: 12%;
+  left: 8vw;
+  width: 50%;
+  color: #F1F1F1;
+  text-align: left;
+}
+    
     
 /* CONTACT - texto centralizado */
 #contact {
@@ -347,7 +366,7 @@ body {
 </section>
 
 <!-- 2 -->
-  <section>
+  <section id="worksB">
   <img class="background-image" src="https://gilbertoferreiraix.github.io/2_SnakeAwake_2024.png" alt="2_SnakeAwake_2024.png" />
   <div class="overlay-text">
    <h1 class="section-title">SnakeAwake </h1>
