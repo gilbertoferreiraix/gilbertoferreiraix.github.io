@@ -60,13 +60,13 @@ body {
     flex-grow: 1;
     text-align: center;
     white-space: nowrap;
-    font-size: clamp(4px, 2.8vw, 32px);
+    font-size: clamp(4px, 2.7vw, 32px);
     padding: 0 70px;
 }
 
 @media (max-width: 768px) {
   .header-content {
-    padding: 0 30px;
+    padding: 0 10px;
   }
 }
 
@@ -110,6 +110,13 @@ body {
      font-size: 13px;
   }
 }
+
+@media (max-width: 400px) {
+  .menu-content a {
+     padding: 6px 10px;
+     font-size: 10px;
+  }
+}    
     
 /* Hover e focus acessíveis */
 .menu-content a:hover,
