@@ -156,13 +156,9 @@ body {
 /* BIO - texto à direita */
 #bio {
   position: relative;
-  margin-top: 75px;
+  margin-top: clamp(35px, 1.65vw, 75px);
 }
-@media (max-width: 764px) {
-  #bio {
-   margin-top: clamp(35px, 1.65vw, 50px);
-  }
-}    
+
     
 #bio .overlay-text {
   position: absolute;
