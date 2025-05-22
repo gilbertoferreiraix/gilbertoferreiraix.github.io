@@ -333,6 +333,21 @@ body {
 .hover-image-link:hover .hover-img {
   opacity: 1;
 }
+
+
+ /* Espaçamento seguro entre ícones */
+.social-icons-container {
+  display: flex;
+  justify-content: center; /* Centraliza os ícones */
+  gap: 1.5em; /* Espaço ajustável (1.5x o tamanho da fonte) */
+}
+/* Versão para mobile */
+@media (max-width: 600px) {
+  .social-icons-container {
+    gap: 1em; /* Espaço menor em telas pequenas */
+  }
+}
+
     
 </style>
 </head>
@@ -447,8 +462,8 @@ body {
       <h1 class="section-title">CONTACT</h1>
      <p>&nbsp;</p>
       <p class="line big contact"><a href="malito:gilbertoferreiraix@gmail.com" target="_blank">gilbertoferreiraix@gmail.com</p></a>
-     <p>&nbsp;</p>
-    <p> 
+
+    <p class="social-icons-container tight-group"> 
      <a href="https://www.linkedin.com/in/gilbertoferreiraix/" target="_blank" rel="noopener noreferrer" class="hover-image-link">
         <img src="https://gilbertoferreiraix.github.io/linkedin.png" alt="linkedin" class="default-img">
         <img src="https://gilbertoferreiraix.github.io/linkedin2.png" alt="linkedin2" class="hover-img">
