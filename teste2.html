@@ -32,7 +32,12 @@ body {
   padding: 90px 0.5rem 10px; /* Top padding aumentado para não cobrir conteúdo com header fixo */
   overflow: hidden;
 }
-
+  @media (max-width: 764px) {
+  .container {
+  padding: 60px 0.5rem 10px; 
+  }
+ }  
+    
 /* Cabeçalho fixo no topo da página */
   .header {
     position: fixed;
@@ -152,12 +157,7 @@ body {
   position: relative;
   margin-top: 70px;
 }
-@media (max-width: 764px) {
-  #bio {
-  position: relative;
-  margin-top: clamp(45px, 1.65vw, 75px);
-  }
- }   
+ 
     
 #bio .overlay-text {
   position: absolute;
